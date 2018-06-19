@@ -14,6 +14,7 @@
 		8469040D20D94D79002688FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8469040B20D94D79002688FD /* LaunchScreen.storyboard */; };
 		8469041820D94D79002688FD /* SwooshyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469041720D94D79002688FD /* SwooshyTests.swift */; };
 		8469042320D94D79002688FD /* SwooshyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469042220D94D79002688FD /* SwooshyUITests.swift */; };
+		8469043220D95F18002688FD /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469043120D95F18002688FD /* BorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8469041E20D94D79002688FD /* SwooshyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwooshyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8469042220D94D79002688FD /* SwooshyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwooshyUITests.swift; sourceTree = "<group>"; };
 		8469042420D94D79002688FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8469043120D95F18002688FD /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		8469040120D94D78002688FD /* Swooshy */ = {
 			isa = PBXGroup;
 			children = (
+				8469043020D95EC6002688FD /* Views */,
 				8469040220D94D78002688FD /* AppDelegate.swift */,
 				8469040420D94D78002688FD /* ViewController.swift */,
 				8469040620D94D78002688FD /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				8469042420D94D79002688FD /* Info.plist */,
 			);
 			path = SwooshyUITests;
+			sourceTree = "<group>";
+		};
+		8469043020D95EC6002688FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8469043120D95F18002688FD /* BorderButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				8469040520D94D78002688FD /* ViewController.swift in Sources */,
 				8469040320D94D78002688FD /* AppDelegate.swift in Sources */,
+				8469043220D95F18002688FD /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
