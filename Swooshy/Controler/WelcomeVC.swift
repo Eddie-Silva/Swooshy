@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     @IBAction func unwindFromSkillVC(unwindSegue:UIStoryboardSegue) {
     }
     
-    @IBAction func unwindFromLeagueVC(unwindSegue:UIStoryboardSegue) {
-    }
     
 }
 
