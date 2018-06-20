@@ -83,7 +83,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="QEO-oM-w1q" kind="show" id="e3z-UG-grg"/>
+                                    <segue destination="QEO-oM-w1q" kind="show" identifier="onGetStartedPressed" id="ZbG-UH-mE7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-LU-qDf">
@@ -156,6 +156,9 @@
                                         <state key="normal" title="MALE">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMaleTapped:" destination="QEO-oM-w1q" eventType="touchUpInside" id="CHE-HS-Aj6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdd-DG-6HB" customClass="BorderButton" customModule="Swooshy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="47" width="200" height="29"/>
@@ -164,6 +167,9 @@
                                         <state key="normal" title="FEMALE">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onFemaleTapped:" destination="QEO-oM-w1q" eventType="touchUpInside" id="KzM-oq-owW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-3v-Cac" customClass="BorderButton" customModule="Swooshy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="94" width="200" height="29"/>
@@ -172,6 +178,9 @@
                                         <state key="normal" title="CO-ED">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoEdTapped:" destination="QEO-oM-w1q" eventType="touchUpInside" id="P5R-vZ-4qN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -185,7 +194,7 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-7v-WhP" customClass="BorderButton" customModule="Swooshy" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nextButton" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-7v-WhP" customClass="BorderButton" customModule="Swooshy" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="597" width="200" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.53749449819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -197,9 +206,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="QEO-oM-w1q" eventType="touchUpInside" id="vSE-6K-woz"/>
-                                    <action selector="nextPressed:" destination="QEO-oM-w1q" eventType="touchUpInside" id="cna-jb-Nix"/>
-                                    <action selector="onNextTapped:" destination="QEO-oM-w1q" eventType="touchUpInside" id="hK5-vR-4aW"/>
+                                    <segue destination="Or8-mq-cYc" kind="show" identifier="onNextPressed" id="Pmg-VR-srP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="358-r5-QSu">
@@ -216,7 +223,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="Iz2-R1-VMq" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="d5c-bx-gRH"/>
+                                    <segue destination="Iz2-R1-VMq" kind="unwind" unwindAction="unwindFromLegueVCWithUnwindSegue:" id="EKv-Sj-kyt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -241,7 +248,7 @@
                         <viewLayoutGuide key="safeArea" id="AvF-dN-rEz"/>
                     </view>
                     <connections>
-                        <segue destination="Or8-mq-cYc" kind="show" identifier="skillSegue" id="wMC-lA-9ih"/>
+                        <outlet property="nxtButton" destination="Czt-7v-WhP" id="cv0-NG-kgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b28-rb-UfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,7 +334,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="BPc-tl-6PY" kind="unwind" unwindAction="unwindFromLegueVCWithUnwindSegue:" id="DUd-10-83u"/>
+                                    <segue destination="BPc-tl-6PY" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="q0A-NM-CpI"/>
                                 </connections>
                             </button>
                         </subviews>
